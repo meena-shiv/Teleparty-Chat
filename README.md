@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# Teleparty Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time chat application built with React, TypeScript, and WebSockets, featuring a clean and intuitive user interface powered by Chakra UI.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Modern UI** - Clean and responsive interface built with Chakra UI
+- 💬 **Real-time Messaging** - Instant message delivery using WebSockets
+- 👥 **Multi-room Support** - Create or join chat rooms with unique IDs
+- 🚀 **Fast & Lightweight** - Built with Vite for optimal performance
+- 🔒 **Type Safety** - Full TypeScript support for better development experience
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/meena-shiv/Teleparty-Chat.git
+   cd Teleparty-Chat
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **UI Library**: Chakra UI
+- **State Management**: React Context API
+- **Real-time**: WebSockets
+- **Build Tool**: Vite
+- **Linting**: ESLint, Prettier
+
+## 📂 Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+│   ├── ChatRoom.tsx  # Chat room component
+│   └── Home.tsx      # Home page component
+├── contexts/         # React context providers
+│   └── ChatContext.tsx
+├── services/         # API and WebSocket services
+│   └── websocket.ts
+├── types/            # TypeScript type definitions
+│   └── index.ts
+├── App.tsx           # Main application component
+└── main.tsx          # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🙏 Acknowledgments
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [Vite](https://vitejs.dev/) for the amazing build tooling
+- [Chakra UI](https://chakra-ui.com/) for the beautiful components
+- [React](https://reactjs.org/) for the awesome library
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+Made with ❤️ by [Shiv Meena]
