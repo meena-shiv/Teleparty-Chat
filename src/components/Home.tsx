@@ -57,7 +57,7 @@ export default function Home() {
       dispatch({ type: 'SET_CONNECTION_STATUS', payload: true });
       
       // Navigate to chat room
-      navigate(`/room/${newRoomId}`);
+      navigate(`/Teleparty-Chat/room/${newRoomId}`);
     } catch (error) {
       console.error('Error creating room:', error);
       setFormError('Failed to create room. Please try again.');
@@ -90,7 +90,7 @@ export default function Home() {
       dispatch({ type: 'SET_CONNECTION_STATUS', payload: true });
       
       // Navigate to chat room
-      navigate(`/room/${roomId}`);
+      navigate(`/Teleparty-Chat/room/${roomId}`);
     } catch (error) {
       console.error('Error joining room:', error);
       setFormError('Failed to join room. Please check the room ID and try again.');

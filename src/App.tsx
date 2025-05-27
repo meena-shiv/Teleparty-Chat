@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Box minH="100vh" bg="gray.50">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/room/:roomId" element={<ChatRoom />} />
+            <Route path="/Teleparty-Chat/" element={<Home />} />
+            <Route path="/Teleparty-Chat/room/:roomId" element={<ChatRoom />} />
           </Routes>
         </Box>
       </Router>
